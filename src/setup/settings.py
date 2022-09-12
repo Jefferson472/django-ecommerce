@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # third-apps
+    'crispy_forms',
     # my-apps
     "apps.ecommerce",
     "apps.cart",
@@ -140,3 +141,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 CART_SESSION_ID = 'cart'
+
+# crispy form
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
