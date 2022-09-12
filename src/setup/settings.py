@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     # my-apps
     "apps.ecommerce",
     "apps.cart",
+    "apps.orders",
 ]
 
 MIDDLEWARE = [
