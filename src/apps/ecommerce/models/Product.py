@@ -1,4 +1,3 @@
-from distutils.command.upload import upload
 from django.db import models
 from django.urls import reverse
 
@@ -20,11 +19,11 @@ class Product(models.Model):
         db_table = 'tb_product'
         index_together = (('id', 'slug'),) # as pequisas serão feitas por id e slug e isso melhora o desempenho
         ordering = ('name',)
-        verbose_name = ("Produto")
-        verbose_name_plural = ("Produtos")
+        verbose_name = ('Produto')
+        verbose_name_plural = ('Produtos')
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("_detail", kwargs={"pk": self.pk})
+        return reverse('product_detail', kwargs={'pk': self.pk, 'slug': self.slug})

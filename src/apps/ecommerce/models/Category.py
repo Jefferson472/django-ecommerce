@@ -9,11 +9,11 @@ class Category(models.Model):
     class Meta:
         db_table = 'tb_category'
         ordering = ('name',)
-        verbose_name = ("Categoria")
-        verbose_name_plural = ("Categorias")
+        verbose_name = ('Categoria')
+        verbose_name_plural = ('Categorias')
 
     def __str__(self):
         return self.name
 
     def get_absolute_url(self):
-        return reverse("_detail", kwargs={"pk": self.pk})
+        return reverse('product_list_by_category', kwargs={'slug': self.slug})
