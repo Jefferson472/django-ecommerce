@@ -1,7 +1,7 @@
 from decimal import Decimal
 from django.conf import settings
 
-from apps.ecommerce import Product
+from ..ecommerce.models import Product
 
 
 class Cart(object):
@@ -14,7 +14,7 @@ class Cart(object):
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
-    def __iter___(self):
+    def __iter__(self):
         """ Itera pelos itens do carrinho de compras e obtém os produtos do banco de dados """
         product_ids = self.cart.keys()
         # obtém os objetos referentes aos produtos e os adiciona no carrinho
@@ -35,7 +35,7 @@ class Cart(object):
 
     def add(self, product, quantity=1, override_quantity=False):
         """ Add um produto ao carrinho de compras ou atualiza sua quantidade. """
-        product_id = str(product_id)
+        product_id = str(product.id)
         if product_id not in self.cart:
             self.cart[product_id] = {
                 'quantity': 0,
@@ -43,13 +43,13 @@ class Cart(object):
             }
 
         if override_quantity:
-            self.cart[product_id][quantity] = quantity
+            self.cart[product_id]['quantity'] = quantity
         else:
-            self.cart[product_id][quantity] += quantity
+            self.cart[product_id]['quantity'] += quantity
         self.save()
 
     def save(self):
-        # marca a sessãõ como modificada para garantir que seja salva
+        # marca a sessão como modificada para garantir que seja salva
         self.session.modified = True
 
     def remove(self, product):
