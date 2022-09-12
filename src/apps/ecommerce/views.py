@@ -1,8 +1,10 @@
 from unicodedata import category
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
+from django.views.generic.edit import FormView
 
 from .models import Category, Product
+from apps.cart.forms import CartAddProductForm
 
 
 class ProductListView(ListView):
@@ -23,5 +25,6 @@ class ProductListView(ListView):
         return context
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(DetailView, FormView):
     model = Product
+    form_class  = CartAddProductForm
