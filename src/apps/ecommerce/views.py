@@ -15,6 +15,13 @@ class ProductListView(ListView):
             queryset = queryset.filter(category=kwargs['category_slug'])
         return queryset
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        if kwargs.get('category_slug'):
+            context['category'] = get_object_or_404(Category, slug=kwargs['category_slug'])
+        return context
+
 
 class ProductDetailView(DetailView):
     model = Product
