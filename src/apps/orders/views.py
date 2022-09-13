@@ -1,5 +1,6 @@
 from django.views.generic.edit import FormView
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.urls import reverse
 
 from apps.cart.cart import Cart
 from .forms import OrderCreateForm
@@ -27,8 +28,7 @@ class OrderFormView(FormView):
             cart.clear() # limpa o carrinho
 
             order_created.delay(order.id) # dispara uma tarefa assíncrona
-            return render(
-                request, 'orders/created.html', {'order': order}
-            )
+            request.session['order_id'] = order.id # define o pedido na sessão
+            return redirect(reverse('payment:process'))
 
         return super().post(request, *args, **kwargs)

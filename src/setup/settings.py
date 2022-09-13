@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
 import environ, os
+import braintree
 from pathlib import Path
 
 
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     "apps.ecommerce",
     "apps.cart",
     "apps.orders",
+    "apps.payment",
 ]
 
 MIDDLEWARE = [
@@ -147,3 +149,15 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # EMAIL SMTP CONSOLE
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# Configurações para o Braintree
+BRAINTREE_MERCHANT_ID = env('BRAINTREE_MERCHANT_ID')
+BRAINTREE_PUBLIC_KEY = env('BRAINTREE_PUBLIC_KEY')
+BRAINTREE_PRIVATE_KEY = env('BRAINTREE_PRIVATE_KEY')
+
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY,
+)
