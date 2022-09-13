@@ -1,0 +1,29 @@
+version: "3"
+services:
+  rabbit:
+    image: rabbitmq:3-management
+    container_name: 'rabbit'
+    restart: always
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+      - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+
+  celery:
+    container_name: 'celery'
+    restart: always
+    build:
+      context: src
+      dockerfile: Dockerfile
+    command: celery --broker=amqp://${RABBITMQ_DEFAULT_USER}:${RABBITMQ_DEFAULT_PASS}@rabbit:5672// -A setup --workdir src  worker -l info -P gevent
+    volumes:
+      - .:/code
+    links:
+      - rabbitmq
+    depends_on:
+      - rabbitmq
