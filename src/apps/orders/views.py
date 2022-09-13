@@ -1,9 +1,10 @@
 from django.views.generic.edit import FormView
 from django.shortcuts import render
 
-from .models import OrderItem
-from .forms import OrderCreateForm
 from apps.cart.cart import Cart
+from .forms import OrderCreateForm
+from .models import OrderItem
+from .tasks import order_created
 
 
 class OrderFormView(FormView):
@@ -24,5 +25,10 @@ class OrderFormView(FormView):
                     quantity=item['quantity']
                 )
             cart.clear() # limpa o carrinho
-            return (render(request, 'orders/created.html'))
+
+            order_created.delay(order.id) # dispara uma tarefa assíncrona
+            return render(
+                request, 'orders/created.html', {'order': order}
+            )
+
         return super().post(request, *args, **kwargs)

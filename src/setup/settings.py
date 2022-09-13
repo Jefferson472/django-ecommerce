@@ -144,3 +144,6 @@ CART_SESSION_ID = 'cart'
 
 # crispy form
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# EMAIL SMTP CONSOLE
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
