@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from .models import Order, OrderItem
+from .utils.csv import export_csv
 
 
 class OrderItemInline(admin.TabularInline):
@@ -17,3 +18,5 @@ class OrderAdmin(admin.ModelAdmin):
     ]
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]
+    actions = [export_csv]
+
