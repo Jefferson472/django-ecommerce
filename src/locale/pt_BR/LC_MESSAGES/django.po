@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-09-14 18:47-0300\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2022-09-14 19:10-0300\n"
+"Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\setup\settings.py:127
 msgid "English"
@@ -42,16 +43,14 @@ msgid_plural ""
 "                                "
 msgstr[0] ""
 "\n"
-"                                    %(items)s item, $%(total)s\n"
-"                                "
+"%(items)s item, $%(total)s"
 msgstr[1] ""
 "\n"
-"                                    %(items)s itens, $%(total)s\n"
-"                                "
+"%(items)s itens, $%(total)s                                "
 
 #: .\templates\cart\cart_detail.html:6 .\templates\cart\cart_detail.html:10
 msgid "Your shopping cart"
-msgstr ""
+msgstr "Seu Carrinho"
 
 #: .\templates\cart\cart_detail.html:55
 msgid "Subtotal"
@@ -65,7 +64,7 @@ msgid ""
 "        "
 msgstr ""
 "\n"
-"          <td>\"%(code)s\" cupom (%(discount)s%% off)</td>\n"
+"<td>\"%(code)s\" cupom (%(discount)s%% off)</td>\n"
 "        "
 
 #: .\templates\cart\cart_detail.html:70 .\templates\orders\create.html:30
@@ -74,15 +73,15 @@ msgstr "Total"
 
 #: .\templates\cart\cart_detail.html:80
 msgid "Apply a coupon"
-msgstr "Aplicar um cupom"
+msgstr "Aplicar Cupom"
 
 #: .\templates\cart\cart_detail.html:84
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: .\templates\cart\cart_detail.html:89
 msgid "Continue shopping"
-msgstr ""
+msgstr "Continuar Comprando"
 
 #: .\templates\cart\cart_detail.html:90 .\templates\orders\create.html:6
 #: .\templates\orders\create.html:10
@@ -104,6 +103,8 @@ msgid ""
 "            \"%(code)s\" (%(discount)s%% off)\n"
 "          "
 msgstr ""
+"\n"
+"\"%(code)s\" (%(discount)s%% off)"
 
 #: .\templates\orders\create.html:36
 msgid "Place order"
@@ -117,11 +118,8 @@ msgstr "Obrigado"
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is "
-"<strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
 "\n"
-"    <p>Seu pedido foi realizado com sucesso. O número do pedido é <strong>"
-"%(order_id)s</strong>.</p>\n"
-"  "
+"<p>Seu pedido foi realizado com sucesso. O número do pedido é <strong>%(order_id)s</strong>.</p>"
