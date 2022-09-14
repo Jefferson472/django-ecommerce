@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load i18n %}
 
 {% block title %}
   {{ object.name }}
@@ -41,7 +42,7 @@
             /> {% endcomment %}
             <button class="btn btn-outline-dark flex-shrink-0" type="submit">
               <i class="bi-cart-fill me-1"></i>
-              Add to cart
+              {% trans "Add to cart" %}
             </button>
           </div>
         </form>
