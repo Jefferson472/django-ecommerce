@@ -1,0 +1,87 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-14 18:03-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: .\setup\settings.py:127
+msgid "English"
+msgstr ""
+
+#: .\setup\settings.py:128
+msgid "Portuguese"
+msgstr "Português"
+
+#: .\templates\cart\cart_detail.html:55
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#: .\templates\cart\cart_detail.html:60
+#, python-format
+msgid ""
+"\n"
+"          <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
+"        "
+msgstr ""
+"\n"
+"          <td>\"%(code)s\" cupom (%(discount)s%% off)</td>\n"
+"        "
+
+#: .\templates\cart\cart_detail.html:70 .\templates\orders\create.html:30
+msgid "Total"
+msgstr "Total"
+
+#: .\templates\cart\cart_detail.html:80
+msgid "Apply a coupon"
+msgstr "Aplicar um cupom"
+
+#: .\templates\orders\create.html:6 .\templates\orders\create.html:10
+msgid "Checkout"
+msgstr "Pagamento"
+
+#: .\templates\orders\create.html:13
+msgid "Your order"
+msgstr "Seu pedido"
+
+#: .\templates\orders\create.html:23
+#, python-format
+msgid ""
+"\n"
+"            \"%(code)s\" (%(discount)s%% off)\n"
+"          "
+msgstr ""
+
+#: .\templates\orders\create.html:36
+msgid "Place order"
+msgstr "Finalizar Pedido"
+
+#: .\templates\orders\created.html:5 .\templates\orders\created.html:9
+msgid "Thank you"
+msgstr "Obrigado"
+
+#: .\templates\orders\created.html:10
+#, python-format
+msgid ""
+"\n"
+"    <p>Your order has been successfully completed. Your order number is "
+"<strong>%(order_id)s</strong>.</p>\n"
+"  "
+msgstr ""
+"\n"
+"    <p>Seu pedido foi realizado com sucesso. O número do pedido é <strong>"
+"%(order_id)s</strong>.</p>\n"
+"  "
