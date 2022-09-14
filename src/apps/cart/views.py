@@ -1,8 +1,10 @@
 from django.shortcuts import redirect, get_object_or_404
 from django.views.decorators.http import require_POST
 from django.views.generic.edit import FormView
+from apps.coupons.views import coupon_apply
 
 from apps.ecommerce.models import Product
+from apps.coupons.forms import CouponApplyForm
 from .cart import Cart
 from .forms import CartAddProductForm
 
@@ -18,6 +20,7 @@ class CartDetailView(FormView):
             item['update_quantity_form'] = CartAddProductForm(
                 initial={'quantity': item['quantity'], 'override': True}
             )
+        context['coupon_apply_form'] = CouponApplyForm()
         context['cart'] = cart
         return context
 
