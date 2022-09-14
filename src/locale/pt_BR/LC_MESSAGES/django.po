@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-14 18:36-0300\n"
+"POT-Creation-Date: 2022-09-14 18:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,6 +49,10 @@ msgstr[1] ""
 "                                    %(items)s itens, $%(total)s\n"
 "                                "
 
+#: .\templates\cart\cart_detail.html:6 .\templates\cart\cart_detail.html:10
+msgid "Your shopping cart"
+msgstr ""
+
 #: .\templates\cart\cart_detail.html:55
 msgid "Subtotal"
 msgstr "Subtotal"
@@ -72,13 +76,22 @@ msgstr "Total"
 msgid "Apply a coupon"
 msgstr "Aplicar um cupom"
 
+#: .\templates\cart\cart_detail.html:84
+msgid "Apply"
+msgstr ""
+
+#: .\templates\cart\cart_detail.html:89
+msgid "Continue shopping"
+msgstr ""
+
+#: .\templates\cart\cart_detail.html:90 .\templates\orders\create.html:6
+#: .\templates\orders\create.html:10
+msgid "Checkout"
+msgstr "Pagamento"
+
 #: .\templates\ecommerce\product_detail.html:46
 msgid "Add to cart"
 msgstr "Adicionar ao Carrinho"
-
-#: .\templates\orders\create.html:6 .\templates\orders\create.html:10
-msgid "Checkout"
-msgstr "Pagamento"
 
 #: .\templates\orders\create.html:13
 msgid "Your order"
