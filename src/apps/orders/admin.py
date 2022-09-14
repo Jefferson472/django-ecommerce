@@ -1,8 +1,11 @@
 from django.contrib import admin
 
 from .models import Order, OrderItem
-from .utils import csv, admin_order_detail
+from .utils.admin_order import order_detail, order_pdf
+from .utils.csv import export_csv
 
+
+order_pdf.short_description = 'Invoice'
 
 class OrderItemInline(admin.TabularInline):
     model = OrderItem
@@ -14,9 +17,8 @@ class OrderAdmin(admin.ModelAdmin):
     list_display = [
         'id', 'first_name', 'last_name', 'email',
         'address', 'postal_code', 'city', 'paid',
-        'created', 'updated', admin_order_detail.order_detail
+        'created', 'updated', order_detail, order_pdf
     ]
     list_filter = ['paid', 'created', 'updated']
     inlines = [OrderItemInline]
-    actions = [csv.export_csv]
-
+    actions = [export_csv]
