@@ -14,3 +14,10 @@ date: 12/28
 WeasyPrint
 Guia de instalação em caso de erro:
 https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation
+
+
+Comandos para Traduções
+
+```python
+django-admin makemessages -l en -l pt_BR
+```
