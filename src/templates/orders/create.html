@@ -32,7 +32,7 @@
 
   <form method="post" class="order-form" style='max-width: 50%; margin: 0px auto;'>
     {{ form|crispy }}
-    <p><input type="submit" value="{% trans "Place order" %}"></p>
     {% csrf_token %}
+    <p><input type="submit" value="{% trans "Place order" %}"></p>
   </form>
 {% endblock %}
