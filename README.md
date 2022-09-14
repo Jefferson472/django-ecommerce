@@ -2,6 +2,10 @@
 Projeto de loja online criado com Django
 
 
+# API de Pagamentos
+Link para SandBox Braintree
+https://sandbox.braintreegateway.com/login
+
 Cartão de Crédito Braintree retorna Sucesso
 card: 4111 1111 1111 1111
 cvv: 123
