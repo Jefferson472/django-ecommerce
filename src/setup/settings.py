@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third-apps
     'crispy_forms',
+    'rosetta',
     # my-apps
     "apps.ecommerce",
     "apps.cart",
