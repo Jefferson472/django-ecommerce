@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.localeMidleware", # add o pacote de traduções do Django
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -119,13 +120,20 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "pt-br"
+LANGUAGE_CODE = "en"
+
+LANGUAGES = (
+    ('en', 'English'),
+    ('pt-br', 'Portuguese'),
+)
 
 TIME_ZONE = "America/Sao_Paulo"
 
 USE_I18N = True
 
 USE_TZ = True
+
+LOCALE_PATH = os.path.join(BASE_DIR, 'locale/')
 
 
 # Static files (CSS, JavaScript, Images)
