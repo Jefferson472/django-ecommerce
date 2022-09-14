@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-14 18:03-0300\n"
+"POT-Creation-Date: 2022-09-14 18:36-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,23 @@ msgstr ""
 #: .\setup\settings.py:128
 msgid "Portuguese"
 msgstr ""
+
+#: .\templates\_partials\_nav.html:25
+msgid "Cart"
+msgstr ""
+
+#: .\templates\_partials\_nav.html:29
+#, python-format
+msgid ""
+"\n"
+"                                    %(items)s item, $%(total)s\n"
+"                                "
+msgid_plural ""
+"\n"
+"                                    %(items)s item, $%(total)s\n"
+"                                "
+msgstr[0] ""
+msgstr[1] ""
 
 #: .\templates\cart\cart_detail.html:55
 msgid "Subtotal"
@@ -44,6 +61,10 @@ msgstr ""
 
 #: .\templates\cart\cart_detail.html:80
 msgid "Apply a coupon"
+msgstr ""
+
+#: .\templates\ecommerce\product_detail.html:46
+msgid "Add to cart"
 msgstr ""
 
 #: .\templates\orders\create.html:6 .\templates\orders\create.html:10
