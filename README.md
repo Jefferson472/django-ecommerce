@@ -21,3 +21,6 @@ Comandos para Traduções
 ```python
 django-admin makemessages -l en -l pt_BR
 ```
+```python
+django-admin compilemessages 
+```
