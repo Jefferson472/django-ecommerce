@@ -1,7 +1,7 @@
-version: "3"
+version: "3.9"
 services:
   rabbit:
-    image: rabbitmq:3-management
+    image: rabbitmq:3.10-management
     container_name: 'rabbit'
     restart: always
     ports:
@@ -14,6 +14,26 @@ services:
       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
 
+  app:
+    container_name: app
+    restart: always
+    build:
+      context: src
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/code
+    command: python src/manage.py runserver 0.0.0.0:8000
+    # environment:
+    #   - DB_NAME=${DB_NAME}
+    #   - DB_USER=${DB_USER}
+    #   - DB_PASSWORD=${DB_PASSWORD}
+    #   - DB_HOST=${DB_HOST}
+    #   - DB_PORT=${DB_PORT}
+    # depends_on:
+    #   - db
+
   celery:
     container_name: 'celery'
     restart: always
@@ -24,6 +44,6 @@ services:
     volumes:
       - .:/code
     links:
-      - rabbitmq
+      - rabbit
     depends_on:
-      - rabbitmq
+      - rabbit

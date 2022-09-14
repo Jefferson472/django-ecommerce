@@ -1,5 +1,6 @@
 celery:
-	celery -A setup --workdir src  worker -l info -P gevent
+	celery -A setup --workdir src  worker -l INFO -P gevent
+	celery --broker=amqp://guest:guest@rabbit:5672// -A setup --workdir src  worker -l info
 
 flower:
 	# localhost:5555
