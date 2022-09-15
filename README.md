@@ -16,7 +16,7 @@ Guia de instalação em caso de erro:
 https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation
 
 
-Comandos para Traduções
+### Comandos para Traduções
 
 ```python
 django-admin makemessages -l en -l pt_BR
@@ -24,4 +24,10 @@ django-admin makemessages --all
 ```
 ```python
 django-admin compilemessages 
+```
+
+### Parler
+
+```python
+python src/manage.py makemigrations ecommerce --name "translations"
 ```
