@@ -1,3 +1,14 @@
+# WIP
+Lista de pendências:
+- verificar dockercompose rabbit não funciona
+- verificar dockercompose celery não funciona
+- add recomendação fake quando não houver nenhuma recomendação ou a conexão com redis falhar
+- add um try para o celery em caso de falha
+- add um try para o redis em caso de falha
+- melhorar o CSS (remover o css inútil e refazer)
+- escrever um readme melhor
+- hospedar o proejto
+
 # django-ecommerce
 Projeto de loja online criado com Django
 
