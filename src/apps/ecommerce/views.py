@@ -1,10 +1,10 @@
-from gettext import translation
-from unicodedata import category
-from django.shortcuts import render, get_object_or_404
+from itertools import product
+from django.shortcuts import get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import FormView
 
 from .models import Category, Product
+from .recommender import Recommender
 from apps.cart.forms import CartAddProductForm
 
 
@@ -36,3 +36,12 @@ class ProductListView(ListView):
 class ProductDetailView(DetailView, FormView):
     model = Product
     form_class  = CartAddProductForm
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        r = Recommender()
+        product = self.object
+        context['recommended_products'] = r.suggest_products_for([product], 4)
+
+        return context
