@@ -1,5 +1,3 @@
-{% load i18n %}
-
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
@@ -19,25 +17,9 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex" action="{% url "cart_detail" %}" method="GET">
-                <button class="btn btn-outline-dark" type="submit">
-                    <i class="bi-cart-fill me-1"></i>
-                    {% trans "Cart" %}                    
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">
-                        {% with total_items=cart|length %}
-                            {% if total_items > 0 %}
-                                {% blocktrans with total=cart.get_total_price count item=total_items %}
-                                    {{ items }} item, ${{ total }}
-                                {% plural %}
-                                    {{ items }} item, ${{ total }}
-                                {% endblocktrans %}
-                            {% else %}
-                                0
-                            {% endif %}
-                        {% endwith %}
-                    </span>
-                </button>
-            </form>
+            
+            {% include '_partials/_mini-cart.html' %}
+
         </div>
     </div>
 </nav>
