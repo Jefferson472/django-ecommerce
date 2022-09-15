@@ -1,3 +1,4 @@
+from gettext import translation
 from unicodedata import category
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
@@ -20,8 +21,15 @@ class ProductListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
+
         if kwargs.get('category_slug'):
-            context['category'] = get_object_or_404(Category, slug=kwargs['category_slug'])
+            language = self.request.LANGUAGE_CODE
+            context['category'] = get_object_or_404(
+                Category,
+                translations__language_code=language,
+                translations__slug=kwargs['category_slug'],
+            )
+
         return context
 
 
