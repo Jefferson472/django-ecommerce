@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'rosetta',
     'parler',
+    # 'localflavor', # apps utilizado apenas como exemplo da funcionalidade
     # my-apps
     "apps.ecommerce",
     "apps.cart",
