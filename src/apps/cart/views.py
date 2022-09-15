@@ -4,6 +4,7 @@ from django.views.generic.edit import FormView
 from apps.coupons.views import coupon_apply
 
 from apps.ecommerce.models import Product
+from apps.ecommerce.recommender import Recommender
 from apps.coupons.forms import CouponApplyForm
 from .cart import Cart
 from .forms import CartAddProductForm
@@ -22,6 +23,13 @@ class CartDetailView(FormView):
             )
         context['coupon_apply_form'] = CouponApplyForm()
         context['cart'] = cart
+
+        r = Recommender()
+        cart_products = [item['product'] for item in cart]
+        context['recommended_products'] = r.suggest_products_for(
+            cart_products, max_results=4
+        )
+
         return context
 
 
