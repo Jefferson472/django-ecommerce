@@ -9,6 +9,7 @@ from django.urls import reverse
 from django.views.generic.edit import FormView
 
 from apps.cart.cart import Cart
+from apps.ecommerce.recommender import Recommender
 from .forms import OrderCreateForm
 from .models import OrderItem, Order
 from .tasks import order_created
@@ -39,6 +40,11 @@ class OrderFormView(FormView):
                     quantity=item['quantity']
                 )
             cart.clear() # limpa o carrinho
+            request.session['coupon_id'] = None # remove o cupom da sessão
+
+            # add produtos do carrinho ao sistema redis de recomendação
+            r = Recommender()
+            r.products_bought([item['product'] for item in cart])
 
             order_created.delay(order.id) # dispara uma tarefa assíncrona
             request.session['order_id'] = order.id # define o pedido na sessão
