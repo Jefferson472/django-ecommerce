@@ -24,11 +24,12 @@ class CartDetailView(FormView):
         context['coupon_apply_form'] = CouponApplyForm()
         context['cart'] = cart
 
-        r = Recommender()
-        cart_products = [item['product'] for item in cart]
-        context['recommended_products'] = r.suggest_products_for(
-            cart_products, max_results=4
-        )
+        if cart:
+            r = Recommender()
+            cart_products = [item['product'] for item in cart]
+            context['recommended_products'] = r.suggest_products_for(
+                cart_products, max_results=4
+            )
 
         return context
 
