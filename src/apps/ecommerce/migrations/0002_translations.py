@@ -85,7 +85,7 @@ class Migration(migrations.Migration):
                 "default_permissions": (),
                 "unique_together": {("language_code", "master")},
             },
-            bases=(parler.models.TranslatedFieldsModelMixin, models.Model),
+            bases=(parler.models.TranslatableModel, models.Model),
         ),
         migrations.CreateModel(
             name="CategoryTranslation",
@@ -126,6 +126,6 @@ class Migration(migrations.Migration):
                 "default_permissions": (),
                 "unique_together": {("language_code", "master")},
             },
-            bases=(parler.models.TranslatedFieldsModelMixin, models.Model),
+            bases=(parler.models.TranslatableModel, models.Model),
         ),
     ]

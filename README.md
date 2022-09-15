@@ -31,3 +31,12 @@ django-admin compilemessages
 ```python
 python src/manage.py makemigrations ecommerce --name "translations"
 ```
+
+No arquivo migrations existe um erro ao gerar migrate:
+```python
+bases=(parler.models.TranslatedFieldsModelMixin, models.Model),
+```
+Substituta em todas as ocorrências:
+```python
+bases=(parler.models.TranslatableModel, models.Model),
+```
