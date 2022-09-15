@@ -89,4 +89,7 @@
     <a href="{% url "product_list" %}" class="btn btn-outline-dark">{% trans "Continue shopping" %}</a>
     <a href="{% url "orders:order_create" %}" class="btn btn-outline-dark">{% trans "Checkout" %}</a>
   </p>
+
+  {% include '_partials/_recommended_products.html' %}
+  
 {% endblock %}
