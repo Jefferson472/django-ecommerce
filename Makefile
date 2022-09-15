@@ -20,6 +20,9 @@ freeze:
 rabbit:
 	docker run -d --rm --hostname myhost --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.10-management
 
+redis-cli:
+	docker exec -it redis redis-cli
+
 runserver:
 	python3 src/manage.py runserver
 
