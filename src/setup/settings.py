@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # third-apps
     'crispy_forms',
     'rosetta',
+    'parler',
     # my-apps
     "apps.ecommerce",
     "apps.cart",
@@ -136,6 +137,17 @@ USE_I18N = True
 USE_TZ = True
 
 LOCALE_PATH = os.path.join(BASE_DIR, 'locale/')
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'pt-br'},
+    ),
+    'default': {
+        'fallback': 'pt-br',
+        'hide_unstranslated': False,
+    }
+}
 
 
 # Static files (CSS, JavaScript, Images)
