@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-14 18:47-0300\n"
-"PO-Revision-Date: 2022-09-14 19:10-0300\n"
+"POT-Creation-Date: 2022-09-15 08:15-0300\n"
+"PO-Revision-Date: 2022-09-15 08:17-0300\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,13 +19,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\setup\settings.py:127
+#: .\apps\payment\urls.py:10
+msgid "process/"
+msgstr "processamento/"
+
+#: .\apps\payment\urls.py:11
+msgid "done/"
+msgstr "pagamento-realizado/"
+
+#: .\apps\payment\urls.py:12
+msgid "canceled/"
+msgstr "cancelado/"
+
+#: .\setup\settings.py:128
 msgid "English"
 msgstr "Inglês"
 
-#: .\setup\settings.py:128
+#: .\setup\settings.py:129
 msgid "Portuguese"
 msgstr "Português"
+
+#: .\setup\urls.py:10
+msgid "admin/"
+msgstr "admin/"
+
+#: .\setup\urls.py:11
+msgid "cart/"
+msgstr "carrinho/"
+
+#: .\setup\urls.py:12
+msgid "orders/"
+msgstr "pedidos/"
+
+#: .\setup\urls.py:13
+msgid "payment/"
+msgstr "pagamentos/"
+
+#: .\setup\urls.py:14
+msgid "coupons/"
+msgstr "cupons"
+
+#: .\setup\urls.py:15
+msgid "rosetta/"
+msgstr "rosetta/"
 
 #: .\templates\_partials\_nav.html:25
 msgid "Cart"

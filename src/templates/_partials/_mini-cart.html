@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<form class="d-flex" action="{% url "cart_detail" %}" method="GET">
+    <button class="btn btn-outline-dark" type="submit">
+        <i class="bi-cart-fill me-1"></i>
+        {% trans "Cart" %}                    
+        <span class="badge bg-dark text-white ms-1 rounded-pill">
+            {% with total_items=cart|length %}
+                {% if total_items > 0 %}
+                    {% blocktrans with total=cart.get_total_price count item=total_items %}
+                        {{ items }} item, ${{ total }}
+                    {% plural %}
+                        {{ items }} item, ${{ total }}
+                    {% endblocktrans %}
+                {% else %}
+                    0
+                {% endif %}
+            {% endwith %}
+        </span>
+    </button>
+</form>
