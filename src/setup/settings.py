@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     # third-apps
     'crispy_forms',
     'rosetta',
+    'parler',
     # my-apps
     "apps.ecommerce",
     "apps.cart",
