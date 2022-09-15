@@ -167,3 +167,6 @@ media/
 
 # redis
 redis/
+
+# rabbitmq
+rabbitmq/
