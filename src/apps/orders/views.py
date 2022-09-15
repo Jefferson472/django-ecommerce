@@ -40,6 +40,7 @@ class OrderFormView(FormView):
                     quantity=item['quantity']
                 )
             cart.clear() # limpa o carrinho
+            request.session['coupon_id'] = None # remove o cupom da sessão
 
             # add produtos do carrinho ao sistema redis de recomendação
             r = Recommender()
