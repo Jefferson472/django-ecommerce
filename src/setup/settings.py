@@ -138,6 +138,17 @@ USE_TZ = True
 
 LOCALE_PATH = os.path.join(BASE_DIR, 'locale/')
 
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'pt-br'},
+    ),
+    'default': {
+        'fallback': 'pt-br',
+        'hide_unstranslated': False,
+    }
+}
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
