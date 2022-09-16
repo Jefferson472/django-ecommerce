@@ -1,6 +1,7 @@
 # WIP
 Lista de pendências:
-- verificar traduções que foram automáticas com trans
+- verificar traduções que foram automáticas com django translate
+- remover a tradução parler de name e slug (não faz sentido para loja de games)
 - add senha ao compose redis
 - verificar dockercompose rabbit não funciona
 - verificar dockercompose celery não funciona
@@ -9,7 +10,7 @@ Lista de pendências:
 - add um try para o redis em caso de falha
 - melhorar o CSS (remover o css inútil e refazer)
 - escrever um readme melhor
-- hospedar o proejto
+- hospedar o projeto
 
 # django-ecommerce
 Projeto de loja online criado com Django
