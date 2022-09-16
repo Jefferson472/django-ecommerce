@@ -1,5 +1,7 @@
 # WIP
 Lista de pendências:
+- verificar traduções que foram automáticas com trans
+- add senha ao compose redis
 - verificar dockercompose rabbit não funciona
 - verificar dockercompose celery não funciona
 - add recomendação fake quando não houver nenhuma recomendação ou a conexão com redis falhar
