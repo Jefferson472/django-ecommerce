@@ -1,4 +1,9 @@
 # WIP
+
+<div align="center" id="badges">
+    <img src="https://img.shields.io/badge/STATUS-WIP-red"/>
+</div>
+
 Lista de pendências:
 - verificar traduções que foram automáticas com django translate
 - remover a tradução parler de name e slug (não faz sentido para loja de games)
