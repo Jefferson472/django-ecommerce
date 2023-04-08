@@ -30,7 +30,7 @@ env.read_env(os.path.join(BASE_DIR.parent, '.env'))
 SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env.bool('DEBUG')
+DEBUG = env.bool('DEBUG', default=True)
 
 ALLOWED_HOSTS = []
 
@@ -104,6 +104,7 @@ DATABASES = {
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
+REDIS_PASSWORD = env('REDIS_DEFAULT_PASS')
 
 
 # Password validation
