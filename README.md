@@ -4,7 +4,81 @@
     <img src="https://img.shields.io/badge/STATUS-WIP-red"/>
 </div>
 
-Lista de pendências:
+# Instalando o projeto
+
+1. Clone o repositório:
+Abra um terminal e utilize o código abaixo. Se estiver no VSCode, abra uma nova janela selecione para clonar um novo repositório e cole o link, depois é só escolher um local para salvar.
+    
+    ```
+    git clone https://github.com/Jefferson472/django-ecommerce.git
+    
+    ```
+    
+2. Inicie um ambiente virtual com o comando abaixo:
+    
+    ```
+    python -m venv venv
+    
+    ```
+    
+    Ative o ambiente
+    
+    ```
+    venv/Scripts/activate # Windows
+    venv/bin/activate # Linux
+    
+    ```
+    
+3. Instale as dependências do projeto com o comando abaixo:
+    
+    ```
+    python -m pip install -r src/requirements-dev.txt
+    
+    ```
+    
+
+## Rodando o projeto
+
+1. Grave as migrates no banco de dados:
+    
+    ```
+    python ./src/manage.py makemigrations
+    python ./src/manage.py migrate
+    
+    ```
+    
+2. Execute o servidor django com os comandos abaixo:
+    
+    ```
+    python src/manage.py runserver
+    
+    ```
+    
+
+## Criando e Submetendo um Pull Request
+
+Não faça nenhum commit direto na branch main, sempre que fizer uma modificação inicie uma nova branch. Basta seguir os comandos abaixo:
+
+Este comando irá criar uma nova branch e trocar para esta branch:
+
+```
+git checkout -b <nome da sua branch>
+
+```
+
+Comentar na branch a esquerda cada uma com suas observações ou:
+
+```
+git add . # para add todos os arquivos modificados
+git commit -m "seus comentários"
+
+```
+
+Quando finalizar todas alterações vá até o github e clique em abrir pull request.
+
+
+---
+## Lista de pendências:
 - verificar traduções que foram automáticas com django translate
 - remover a tradução parler de name e slug (não faz sentido para loja de games)
 - add senha ao compose redis
