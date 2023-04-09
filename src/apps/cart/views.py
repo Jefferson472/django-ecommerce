@@ -25,11 +25,10 @@ class CartDetailView(FormView):
         context['cart'] = cart
 
         if cart:
-            r = Recommender()
+            # r = Recommender()  #TODO: redis temporariamente desativado
             cart_products = [item['product'] for item in cart]
-            context['recommended_products'] = r.suggest_products_for(
-                cart_products, max_results=4
-            )
+            # context['recommended_products'] = r.suggest_products_for(cart_products, max_results=4)
+            context['recommended_products'] = Product.objects.all().exclude(id__in=[p.id for p in cart_products])
 
         return context
 

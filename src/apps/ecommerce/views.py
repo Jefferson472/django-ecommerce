@@ -40,8 +40,9 @@ class ProductDetailView(DetailView, FormView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
-        r = Recommender()
+        # r = Recommender()  #TODO: redis temporariamente desativado
         product = self.object
-        context['recommended_products'] = r.suggest_products_for([product], 4)
+        # context['recommended_products'] = r.suggest_products_for([product], 4)
+        context['recommended_products'] = Product.objects.all().exclude(id=product.id)
 
         return context
