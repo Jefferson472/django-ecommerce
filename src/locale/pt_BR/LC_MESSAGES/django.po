@@ -2,13 +2,13 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-09-15 08:15-0300\n"
+"POT-Creation-Date: 2023-08-06 14:19-0300\n"
 "PO-Revision-Date: 2022-09-15 08:17-0300\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,64 +19,72 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: .\apps\payment\urls.py:10
+#: apps/payment/urls.py:10
 msgid "process/"
 msgstr "processamento/"
 
-#: .\apps\payment\urls.py:11
+#: apps/payment/urls.py:11
 msgid "done/"
 msgstr "pagamento-realizado/"
 
-#: .\apps\payment\urls.py:12
+#: apps/payment/urls.py:12
 msgid "canceled/"
 msgstr "cancelado/"
 
-#: .\setup\settings.py:128
+#: setup/settings.py:135
 msgid "English"
 msgstr "Inglês"
 
-#: .\setup\settings.py:129
+#: setup/settings.py:136
 msgid "Portuguese"
 msgstr "Português"
 
-#: .\setup\urls.py:10
+#: setup/urls.py:10
 msgid "admin/"
 msgstr "admin/"
 
-#: .\setup\urls.py:11
+#: setup/urls.py:11
 msgid "cart/"
 msgstr "carrinho/"
 
-#: .\setup\urls.py:12
+#: setup/urls.py:12
 msgid "orders/"
 msgstr "pedidos/"
 
-#: .\setup\urls.py:13
+#: setup/urls.py:13
 msgid "payment/"
 msgstr "pagamentos/"
 
-#: .\setup\urls.py:14
+#: setup/urls.py:14
 msgid "coupons/"
 msgstr "cupons"
 
-#: .\setup\urls.py:15
+#: setup/urls.py:15
 msgid "rosetta/"
 msgstr "rosetta/"
 
-#: .\templates\_partials\_nav.html:25
+#: templates/_partials/_mini-cart.html:6
 msgid "Cart"
 msgstr "Carrinho"
 
-#: .\templates\_partials\_nav.html:29
-#, python-format
+#: templates/_partials/_mini-cart.html:10
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "                                    %(items)s item, $%(total)s\n"
+#| "                                "
+#| msgid_plural ""
+#| "\n"
+#| "                                    %(items)s item, $%(total)s\n"
+#| "                                "
 msgid ""
 "\n"
-"                                    %(items)s item, $%(total)s\n"
-"                                "
+"                        %(items)s item, $%(total)s\n"
+"                    "
 msgid_plural ""
 "\n"
-"                                    %(items)s item, $%(total)s\n"
-"                                "
+"                        %(items)s item, $%(total)s\n"
+"                    "
 msgstr[0] ""
 "\n"
 "%(items)s item, $%(total)s"
@@ -84,15 +92,19 @@ msgstr[1] ""
 "\n"
 "%(items)s itens, $%(total)s                                "
 
-#: .\templates\cart\cart_detail.html:6 .\templates\cart\cart_detail.html:10
+#: templates/_partials/_recommended_products.html:6
+msgid "People who bought this also bought"
+msgstr ""
+
+#: templates/cart/cart_detail.html:6 templates/cart/cart_detail.html:10
 msgid "Your shopping cart"
 msgstr "Seu Carrinho"
 
-#: .\templates\cart\cart_detail.html:55
+#: templates/cart/cart_detail.html:55
 msgid "Subtotal"
 msgstr "Subtotal"
 
-#: .\templates\cart\cart_detail.html:60
+#: templates/cart/cart_detail.html:60
 #, python-format
 msgid ""
 "\n"
@@ -103,36 +115,36 @@ msgstr ""
 "<td>\"%(code)s\" cupom (%(discount)s%% off)</td>\n"
 "        "
 
-#: .\templates\cart\cart_detail.html:70 .\templates\orders\create.html:30
+#: templates/cart/cart_detail.html:70 templates/orders/create.html:30
 msgid "Total"
 msgstr "Total"
 
-#: .\templates\cart\cart_detail.html:80
+#: templates/cart/cart_detail.html:80
 msgid "Apply a coupon"
 msgstr "Aplicar Cupom"
 
-#: .\templates\cart\cart_detail.html:84
+#: templates/cart/cart_detail.html:84
 msgid "Apply"
 msgstr "Aplicar"
 
-#: .\templates\cart\cart_detail.html:89
+#: templates/cart/cart_detail.html:89
 msgid "Continue shopping"
 msgstr "Continuar Comprando"
 
-#: .\templates\cart\cart_detail.html:90 .\templates\orders\create.html:6
-#: .\templates\orders\create.html:10
+#: templates/cart/cart_detail.html:90 templates/orders/create.html:6
+#: templates/orders/create.html:10
 msgid "Checkout"
 msgstr "Pagamento"
 
-#: .\templates\ecommerce\product_detail.html:46
+#: templates/ecommerce/product_detail.html:46
 msgid "Add to cart"
 msgstr "Adicionar ao Carrinho"
 
-#: .\templates\orders\create.html:13
+#: templates/orders/create.html:13
 msgid "Your order"
 msgstr "Seu pedido"
 
-#: .\templates\orders\create.html:23
+#: templates/orders/create.html:23
 #, python-format
 msgid ""
 "\n"
@@ -142,20 +154,22 @@ msgstr ""
 "\n"
 "\"%(code)s\" (%(discount)s%% off)"
 
-#: .\templates\orders\create.html:36
+#: templates/orders/create.html:36
 msgid "Place order"
 msgstr "Finalizar Pedido"
 
-#: .\templates\orders\created.html:5 .\templates\orders\created.html:9
+#: templates/orders/created.html:5 templates/orders/created.html:9
 msgid "Thank you"
 msgstr "Obrigado"
 
-#: .\templates\orders\created.html:10
+#: templates/orders/created.html:10
 #, python-format
 msgid ""
 "\n"
-"    <p>Your order has been successfully completed. Your order number is <strong>%(order_id)s</strong>.</p>\n"
+"    <p>Your order has been successfully completed. Your order number is "
+"<strong>%(order_id)s</strong>.</p>\n"
 "  "
 msgstr ""
 "\n"
-"<p>Seu pedido foi realizado com sucesso. O número do pedido é <strong>%(order_id)s</strong>.</p>"
+"<p>Seu pedido foi realizado com sucesso. O número do pedido é "
+"<strong>%(order_id)s</strong>.</p>"

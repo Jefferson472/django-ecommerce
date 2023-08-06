@@ -2,14 +2,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-06 14:19-0300\n"
-"PO-Revision-Date: 2022-09-14 19:02-0300\n"
+"PO-Revision-Date: 2023-08-06 14:28-0300\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,6 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
-#: apps/coupons/forms.py:6
-msgid "Coupon"
-msgstr "Cupom"
+#: apps/ecommerce/urls.py:10
+msgid "product-category/<slug:slug>"
+msgstr "produto-categoria/<slug:slug>"
+
+#: apps/ecommerce/urls.py:11
+msgid "product/<int:pk>/<slug:slug>"
+msgstr "produto/<int:pk>/<slug:slug>"
