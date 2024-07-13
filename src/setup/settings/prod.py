@@ -15,5 +15,5 @@ MIDDLEWARE += [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DATABASES = {
-    "default": env("DATABASE_URL"),
+    "default": env.db(),
 }
