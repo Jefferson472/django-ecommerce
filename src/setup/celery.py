@@ -3,7 +3,7 @@ from celery import Celery
 
 
 # define o módulo de configurações default de Django para o Celery
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'setup.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'setup.settings.prod')
 
 app = Celery('setup')
 app.config_from_object('django.conf:settings', namespace='CELERY')
