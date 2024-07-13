@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "django-ecommerce"
+version = "0.1.0"
+description = ""
+authors = ["Jefferson Miranda <jefferson472@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.0.7"
+braintree = "^4.28.0"
+brotli = "^1.1.0"
+celery = "^5.4.0"
+django-crispy-forms = "^2.2"
+django-environ = "^0.11.2"
+django-localflavor = "^4.0"
+django-parler = "^2.3"
+django-rosetta = "^0.10.0"
+gevent = "^24.2.1"
+pillow = "^10.4.0"
+redis = "^5.0.7"
+requests = "^2.32.3"
+weasyprint = "^62.3"
+crispy-bootstrap4 = "^2024.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

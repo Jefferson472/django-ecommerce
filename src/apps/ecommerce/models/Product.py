@@ -7,11 +7,9 @@ from .Category import Category
 
 
 class Product(TranslatableModel):
-    translations = TranslatedFields(
-        name = models.CharField(max_length=200, db_index=True),
-        slug = models.SlugField(max_length=200, unique=True),
-        description = models.TextField(blank=True),
-    )
+    name = models.CharField(max_length=200, db_index=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    translations = TranslatedFields(description = models.TextField(blank=True))
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2)

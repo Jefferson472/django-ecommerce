@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # third-apps
     'crispy_forms',
+    'crispy_bootstrap4',
     'rosetta',
     'parler',
     # 'localflavor', # apps utilizado apenas como exemplo da funcionalidade
@@ -104,7 +105,7 @@ DATABASES = {
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 1
-REDIS_PASSWORD = env('REDIS_DEFAULT_PASS')
+REDIS_PASSWORD = env('REDIS_DEFAULT_PASS', default="")
 
 
 # Password validation
@@ -159,12 +160,12 @@ PARLER_LANGUAGES = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, '')]
+STATIC_URL = "static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "")]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
@@ -180,9 +181,9 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Configurações para o Braintree
-BRAINTREE_MERCHANT_ID = env('BRAINTREE_MERCHANT_ID')
-BRAINTREE_PUBLIC_KEY = env('BRAINTREE_PUBLIC_KEY')
-BRAINTREE_PRIVATE_KEY = env('BRAINTREE_PRIVATE_KEY')
+BRAINTREE_MERCHANT_ID = env('BRAINTREE_MERCHANT_ID', default="")
+BRAINTREE_PUBLIC_KEY = env('BRAINTREE_PUBLIC_KEY', default="")
+BRAINTREE_PRIVATE_KEY = env('BRAINTREE_PRIVATE_KEY', default="")
 
 BRAINTREE_CONF = braintree.Configuration(
     braintree.Environment.Sandbox,
@@ -190,3 +191,10 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY,
 )
+
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# CELERY
+CELERY_TASK_ALWAYS_EAGER = True  # todas as tarefas serão executadas de forma síncrona (imediatamente) sem broker
+CELERY_TASK_EAGER_PROPAGATES = True  # retorna o erro imeditamente ao chamador
