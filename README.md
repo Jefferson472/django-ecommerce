@@ -111,6 +111,12 @@ https://doc.courtbouillon.org/weasyprint/stable/first_steps.html#installation
 
 ### Comandos para Traduções
 
+Obs.: Se receber erro referente ao gettext pode baixar aqui: 
+
+https://www.gnu.org/software/gettext/ Para Linux
+
+https://mlocati.github.io/articles/gettext-iconv-windows.html Para Windows
+
 ```python
 django-admin makemessages -l en -l pt_BR
 django-admin makemessages --all
