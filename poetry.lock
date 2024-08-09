@@ -524,13 +524,13 @@ test = ["flake8", "isort", "pytest"]
 
 [[package]]
 name = "django"
-version = "5.0.7"
+version = "5.0.8"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
 optional = false
 python-versions = ">=3.10"
 files = [
-    {file = "Django-5.0.7-py3-none-any.whl", hash = "sha256:f216510ace3de5de01329463a315a629f33480e893a9024fc93d8c32c22913da"},
-    {file = "Django-5.0.7.tar.gz", hash = "sha256:bd4505cae0b9bd642313e8fb71810893df5dc2ffcacaa67a33af2d5cd61888f2"},
+    {file = "Django-5.0.8-py3-none-any.whl", hash = "sha256:333a7988f7ca4bc14d360d3d8f6b793704517761ae3813b95432043daec22a45"},
+    {file = "Django-5.0.8.tar.gz", hash = "sha256:ebe859c9da6fead9c9ee6dbfa4943b04f41342f4cea2c4d8c978ef0d10694f2b"},
 ]
 
 [package.dependencies]
@@ -1472,4 +1472,4 @@ test = ["pytest"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11.9"
-content-hash = "a82cd6c3f8e869fb1fbc9ee3db0b85cb9e5c0db065edb674b31b870337344cce"
+content-hash = "ae10c3ae08c348cfd2b8586aad2390be8a9fdd256a6297e43c4a40b62c4ee0fd"
